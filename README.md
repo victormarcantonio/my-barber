@@ -7,6 +7,8 @@ O My Barber é um sistema para gestão de barbearia e agendamentos. Possui entre
 
 Também possui notificação de agendamento por e-mail e envio de relatório em pdf por e-mail.
 
+Para o Back end foi desenvolvida uma API Rest, e no Front end consumimos a API utilizando Jquery com Ajax.
+
 ## Layout web
 ![Web 1](https://github.com/victormarcantonio/my-barber/blob/master/assets/tela_agendamento.png)
 
