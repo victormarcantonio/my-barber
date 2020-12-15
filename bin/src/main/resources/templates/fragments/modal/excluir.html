@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/Layout">
+
+
+<div class="modal" id="modal-excluir" tabindex="-1" role="dialog" th:fragment="modal-excluir">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Excluir serviço</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body txt-exclusao">
+        <p>Deseja excluir o serviço?</p>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger btn-confirmar-exclusao">Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>

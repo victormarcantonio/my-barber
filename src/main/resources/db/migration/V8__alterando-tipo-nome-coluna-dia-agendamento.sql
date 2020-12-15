@@ -1,0 +1,2 @@
+ALTER TABLE horario_atendimento 
+ALTER COLUMN dia TYPE VARCHAR(100);

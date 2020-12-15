@@ -1,0 +1,3 @@
+- Diagrama de pacotes
+- Diagrama de Componentes
+- Diagrama geral de arquitetura

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/Layout">
+
+<head>
+<meta charset="UTF-8" />
+
+<title>My Barber</title>
+<link rel="icon" href="/imagens/mybarb.png" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="js/jquery-3.3.1.min.js"></script>
+<script  type="text/javascript">
+
+
+if(!sessionStorage.getItem("accessToken")){
+	window.location.href = "/login";
+}
+
+
+var ajax = new XMLHttpRequest();
+
+//Seta tipo de requisição: Post e a URL da API
+ajax.open("POST", "http://localhost:8080/oauth/token", true);
+ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+ajax.setRequestHeader("Authorization", `Basic ${btoa("servidorAuthMyBarber:123")}`);
+
+//Seta paramêtros da requisição e envia a requisição
+ajax.send("refresh_token="+sessionStorage.getItem("refreshToken")+"&grant_type=refresh_token");
+
+//Cria um evento para receber o retorno.
+ajax.onreadystatechange = function(data) {
+// Caso o state seja 4 e o http.status for 200, é porque a requisiçõe deu certo.
+	if (ajax.readyState == 4 && ajax.status == 200) {
+		let data = JSON.parse(ajax.response)
+		sessionStorage.setItem('accessToken', data.access_token);
+		sessionStorage.setItem('refreshToken', data.refresh_token);
+ 	}
+}
+
+</script>
+
+<!-- toastr -->
+<link href="pluginsAdd/toastr/toastr.min.css" rel="stylesheet" />
+
+
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+
+ <!--     datatable /cdn -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.bootstrap4.min.css" rel="stylesheet" />
+
+<!-- Main CSS-->
+<link rel="stylesheet" type="text/css" href="compiler/main.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<!-- Font-icon css-->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+
+</style>
+
+</head>
+
+<body class="app sidebar-mini" >
+
+
+	<!-- NavBar -->
+	<header th:replace="fragments/navbar :: navbar"> </header>
+	<!-- Sidebar -->
+	<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+	<aside th:replace="fragments/sidbar :: nav-sidebar"></aside>
+	
+	<main layout:fragment="conteudo"> </main>
+	
+	  <div class="modal fade modal-loading"
+		data-backdrop="static" data-keyboard="false" tabindex="-1">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content" style="width: 48px">
+				<span class="fa fa-spinner fa-spin fa-3x"></span>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Essential javascripts for application to work-->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="pluginsAdd/jquery.mask.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/index.js"></script>
+	<script src="pluginsAdd/jquery.validate.min.js"></script>
+	<script src="pluginsAdd/toastr/toastr.min.js"></script>
+	<script type="text/javascript" src="js/plugins/sweetalert.min.js"></script>
+	<!-- Jquery UI -->
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<!-- The javascript plugin to display page loading on top-->
+	<script src="js/plugins/pace.min.js"></script>
+	
+	<script src="js/plugins/bootstrap-waitingfor.js"></script>
+	
+	<!-- Page specific javascripts-->
+	<div layout:fragment="js-pagina"> </div>
+	
+</body>
+</html>

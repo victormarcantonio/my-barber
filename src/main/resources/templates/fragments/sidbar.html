@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/Layout"
+	 xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+  <aside class="app-sidebar" th:fragment="nav-sidebar">
+      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="img/sem-foto.png" style="max-width:48px;max-height:48px;" alt="User Image">
+
+        <div>
+          <p class="app-sidebar__user-name" id="nome-usuario-sidbar"></p>
+          <p class="app-sidebar__user-designation" id="cargo-sidbar"></p>
+        </div>
+      </div>
+      
+        
+      <ul class="app-menu">
+        <li><a class="app-menu__item dashboard" href="/"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
+        <li><a class="app-menu__item agenda" href="/agenda"><i class="app-menu__icon fa fa-calendar"></i><span class="app-menu__label">Agenda</span></a></li>
+        <li><a class="app-menu__item barbearia" href="/barbearia"><i class="app-menu__icon fa fa-building"></i><span class="app-menu__label">Barbearia</span></a></li>
+         <li><a class="app-menu__item clientes" href="/clientes"><i class="app-menu__icon fa fa-address-book"></i><span class="app-menu__label">Clientes</span></a></li>
+         <li><a class="app-menu__item funcionarios" href="/funcionarios"><i class="app-menu__icon fa fa-users"></i><span class="app-menu__label">Funcionários</span></a></li>
+         <li><a class="app-menu__item horario-atendimento" href="horario-atendimento"><i class="app-menu__icon fa fa-clock-o"></i><span class="app-menu__label">Horário atendimento</span></a></li>
+         <li><a class="app-menu__item servicos" href="/servicos"><i class="app-menu__icon fa fa-cut"></i><span class="app-menu__label">Serviços</span></a></li>
+      </ul>
+    </aside>	
+</html>

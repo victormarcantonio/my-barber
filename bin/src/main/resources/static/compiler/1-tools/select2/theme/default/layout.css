@@ -1,0 +1,18 @@
+/* Error: Undefined variable.
+ *    ,
+ * 86 |     border-color: $primary-color;
+ *    |                   ^^^^^^^^^^^^^^
+ *    '
+ *   src\main\resources\static\sass\1-tools\select2\theme\default\_multiple.scss 86:19  @import
+ *   src\main\resources\static\sass\1-tools\select2\theme\default\layout.scss 3:11      root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 86 \2502      border-color: $primary-color;\d\a    \2502                    ^^^^^^^^^^^^^^\a    \2575 \a   src\\main\\resources\\static\\sass\\1-tools\\select2\\theme\\default\\_multiple.scss 86:19  @import\a   src\\main\\resources\\static\\sass\\1-tools\\select2\\theme\\default\\layout.scss 3:11      root stylesheet";
+}

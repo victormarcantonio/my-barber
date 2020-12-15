@@ -1,0 +1,40 @@
+.modal-loading .modal-dialog{
+    display: table;
+    position: relative;
+    margin: 0 auto;
+    top: calc(50% - 24px);
+  }
+  
+  .modal-loading .modal-dialog .modal-content{
+    background-color: transparent;
+    border: none;
+  }
+ 
+.fc-nonbusiness{
+	background: #101046!important;
+}
+
+.form-select-agendamento{
+	background: #b8b8c8;
+}
+
+.invalid{
+	
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+.toast{
+  opacity: 1!important;
+}
+
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}
+
+.nome-sobrenome {
+	style="text-transform: capitalize;"
+}

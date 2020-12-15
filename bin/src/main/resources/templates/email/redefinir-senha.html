@@ -1,0 +1,48 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sending Email with Thymeleaf HTML Template Example</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+
+    <!-- use the font -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+        }
+        
+    </style>
+</head>
+<body style="margin: 0; padding: 0;">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;">
+    <tr>
+
+<td style="border-top-left-radius:3px;border-top-right-radius:3px;padding:10px 20px" align="left" bgcolor="#191970">
+
+<a style="display:block;text-decoration:none;color:#ffffff;font-size:22px;border:none" href="http://localhost:8080/" target="_blank">MyBarber</a>
+</td>
+
+</tr>
+    <tr>
+        <td bgcolor="#e0e0e0" style="padding: 40px 30px 40px 30px;">
+            <p th:text="${'Olá, ' + pessoa.nome + '.'}"></p>
+            <p >Recebemos uma solicitação para redefinir a senha de sua conta.</p>
+            <p th:text="${'Login : ' + pessoa.usuario.login + '.'}"></p>
+            <p th:text="${validadeToken}" ></p>
+            <p>Redefina a senha acessando o link a seguir: </p>
+            <a th:href="${resetUrl}">Alterar senha</a>
+            
+            <p>Atencionamente, equipe MyBarber.</p>
+            <img src="sample.png" th:src="'cid:' + ${logo}" height="40" alt=""/>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

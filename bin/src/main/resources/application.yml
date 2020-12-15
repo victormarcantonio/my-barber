@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+#Banco de dados
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/myBarber
+    username: postgres
+    password: postgres
+#Email
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mybarber.btech@gmail.com
+    password: btech2020
+    test-connection: false
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl :
+            enable : false
+          starttls :
+            enable : true
+            required : true

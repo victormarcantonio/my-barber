@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:th="http://www.thymeleaf.org" 
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/Layout"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+layout:decorate="~{index}"
+>
+<head>
+<meta charset="ISO-8859-1" />
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+   <script src="js/relatorio.js"></script>
+
+<!-- Optional theme -->
+
+</head>
+
+	<div layout:fragment="conteudo" class="container">
+		<h2 align="center">Faturamento Mensal</h2>
+
+	<canvas id="bar-chart" width="200" height="100"></canvas>
+	</div>
+
+</html>

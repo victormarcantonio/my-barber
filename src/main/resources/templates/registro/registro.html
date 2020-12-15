@@ -1,0 +1,175 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/imagens/mybarb.png" />
+        <title>Registro</title>
+
+        
+        <link href="css/registro.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <!-- Main CSS-->
+        <link rel="stylesheet" type="text/css" href="compiler/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        
+        <!-- toastr -->
+<link href="pluginsAdd/toastr/toastr.min.css" rel="stylesheet" />
+    </head>
+    <!-- MultiStep Form -->
+    <body>
+        <section class="material-half-bg">
+            <div class="cover"></div>
+        </section>
+        <div class="container-fluid">
+            <div class="row justify-content-center mt-0">
+                <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+                    <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                        <h2><strong>Cadastre sua Barbearia</strong></h2>
+                        <p>Preencha todos os campos para avançar</p>
+                        <div class="row">
+                            <div class="col-md-12 mx-0">
+                                <form id="msform">
+                                    <!-- progressbar -->
+                                    <ul id="progressbar">
+                                        <li class="active" id="account"><strong>Barbearia</strong></li>
+
+                                        <li id="payment"><strong>Usuário</strong></li>
+                                        <li id="confirm"><strong>Finalizado</strong></li>
+                                    </ul>
+                                    <!-- fieldsets -->
+                                    <fieldset id="dadosBarbearia">
+                                        <div class="form-card" >
+                                            <h4 class="line-head">Dados</h4>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-8">
+                                                    <label class="control-label" for="barbearia">Nome</label>
+                                                    <input type="text" name="nomeBarbearia" id="barbearia" class="form-control" placeholder="Nome da Barbearia" />
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label class="control-label" for="telefone">Telefone</label>
+                                                    <input type="text" name="telefone" id="telefone" class="form-control" placeholder="Telefone" />
+                                                </div>
+                                            </div>
+                                            <h4 class="line-head">Endereço</h4>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-8">
+                                                    <label class="control-label">CEP</label>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="cep"></label>
+                                                        <div class="input-group">
+                                                            <input class="form-control" id="cep" name="cep" type="text" style="background-image:none!important;" />
+                                                            <div class="input-group-append">
+                                                                <button class="btn btn-outline-primary btn-buscar" type="button">
+                                                                    <i class="fa fa-search"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group col-md-4">
+                                                    <label for="numero">Número</label>
+                                                    <input type="text" class="form-control" name="numero" id="numero" />
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="rua">Rua</label>
+                                                    <input type="text" class="form-control" name="logradouro" id="logradouro" data-mask-reverse="true"/>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="bairro">Bairro</label>
+                                                    <input type="text" class="form-control" name="bairro" id="bairro" />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-group col-md-8">
+                                                    <label for="Cidade">Cidade</label>
+                                                    <input type="text" class="form-control" name="cidade" id="cidade"  />
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="UF">UF</label>
+                                                    <input type="text" class="form-control" name="uf" id="uf"  />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="btn btn-secondary" type="button" href="/login" >Voltar para login</a>
+                                        <button class="btn btn-primary next" type="button" >Próximo</button>
+                                    </fieldset>
+                                    <fieldset id="dadosUsuario">
+                                        <div class="form-card">
+                                            <h4 class="line-head">Informações do usuário</h4>
+                                             <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                    <label for="nomeBabeiro">Nome</label>
+                                                    <input type="text" class="form-control"  name="nomeBarbeiro" id="nomeBarbeiro" placeholder="Nome do Barbeiro" />
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                    <label for="login">Usuário</label>
+                                                    <input type="text" class="form-control"  name="login" id="login" placeholder="Usuário para acesso" />
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                    <label for="email">E-mail</label>
+                                                    <input type="email" class="form-control"  name="email" id="email" placeholder="E-mail"/>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <button class="btn btn-secondary previous" type="button" >Anterior</button>
+                                        <button class="btn btn-primary next concluir" type="button" form="msform">Concluir</button>
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <h2 class="fs-title text-center">Sucesso !</h2>
+                                            <br />
+                                            <br />
+                                            <div class="row justify-content-center">
+                                                <div class="col-3"><img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image" /></div>
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <div class="row justify-content-center">
+                                                <div class="col-7 text-center">
+                                                    <h5>Você foi cadastrado com sucesso. Ative sua conta e defina sua senha clicando no link enviado ao e-mail cadastrado</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal fade  modal-loading"
+		data-backdrop="static" data-keyboard="false" tabindex="-1">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content" style="width: 48px">
+				<span class="fa fa-spinner fa-spin fa-3x"></span>
+			</div>
+		</div>
+	</div>
+        </div>
+        
+         <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="pluginsAdd/jquery.validate.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        
+        
+	    <script src="pluginsAdd/toastr/toastr.min.js"></script>
+        <script src="pluginsAdd/jquery.mask.min.js"></script>
+        <script src="pluginsAdd/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script src="js/registro.js"></script>
+	    
+    </body>
+</html>

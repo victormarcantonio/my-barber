@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="compiler/main.css">
+     <link rel="stylesheet" type="text/css" href="css/resetar-senha.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>MyBarber</title>
+    <link rel="icon" href="/imagens/mybarb.png" />
+  </head>
+  <body>
+    <section class="material-half-bg">
+      <div class="cover"></div>
+    </section>
+    <section class="lockscreen-content">
+      <div class="logo">
+        <img src="/imagens/logoFundoAzul.png" height="100" alt="" />
+      </div>
+      <div class="lock-box box-resetar">
+        
+        <form id="form-resetar" class="form-resetar" action="index.html">
+        <div  class="alert" style="display: none">
+          </div>
+        
+        <div class="form">
+        <h4 class="text-center user-name">Login: </h4>
+        <p class="text-center text-muted">Resetar senha</p>
+        <div class="form-group">
+         <label class="control-label">NOVA SENHA</label>
+          <div class="input-group">
+            <input class="form-control" type="password" placeholder="Nova senha" autofocus id="senha" name="senha">
+            <div class="input-group-append"><button tabindex="-1" class="input-group-text mostrar-senha" title="Mostrar senha" ><i class="fa fa-eye" aria-hidden="true"></i></button></div>
+          </div>
+         </div>
+		  <div class="form-group">
+            <label class="control-label">CONFIRME A NOVA SENHA</label>
+             <div class="input-group">
+            <input class="form-control" type="password" placeholder="Confirme a nova senha" autofocus id="confirm" name="confirm">
+            <div class="input-group-append"><button tabindex="-1" class="input-group-text mostrar-senha" title="Mostrar senha" ><i class="fa fa-eye" aria-hidden="true"></i></button></div>
+          </div>	
+          </div>
+          <div class="form-group btn-container">
+            <button class="btn btn-primary btn-block btn-resetar" type="submit" ><i class="fa fa-unlock fa-lg"></i>RESETAR SENHA </button>
+          </div>
+          </div>
+          <p><a href="/">Ir para login</a></p>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Essential javascripts for application to work-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="pluginsAdd/jquery.validate.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="js/plugins/pace.min.js"></script>
+    <script src="js/resetar-senha.js"></script>
+  </body>
+</html>

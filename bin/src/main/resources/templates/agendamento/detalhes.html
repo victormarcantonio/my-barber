@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/Layout">
+
+<div class="modal fade" id="detalhes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" th:fragment="detalhes">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tituloModalDetalhes">Detalhes
+                    agendamento</h5>
+                <button type="button" class="close btn-fechar-modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="visualizarDetalhes">
+                    <div class="form-group form-row">
+                        <label for="labelNomeCliente" class="control-label mr-2 font-weight-bold">Cliente : </label>
+                        <div class="form-control-static">
+                            <label id="labelNomeCliente">show</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row">
+                        <label for="labelServicos" id="tituloServico" class="control-label mr-2 font-weight-bold">Serviço : </label>
+                        <div class="form-control-static">
+                            <label id="labelServicos">show</label>
+                        </div>
+                    </div>
+                    <div class="form-group form-row ">
+                        <label for="labelValor" class="control-label mr-2 font-weight-bold">Valor R$ : </label>
+                        <div class="form-control-static">
+                            <label id="labelValor">show</label>
+                        </div>
+                    </div>
+                    <div class="form-group form-row">
+                        <label for="labelInicio" class="control-label mr-2 font-weight-bold">Inicio : </label>
+                        <div class="form-control-static mr-2">
+                            <label id="labelInicio">show</label>
+                        </div>
+                        <label for="labelTermino" class="control-label mr-2 font-weight-bold">Término : </label>
+                        <div class="form-control-static">
+                            <label id="labelTermino">show</label>
+                        </div>
+                    </div>
+                    <div class="form-group form-row">
+                        <label for="labelObs" class="control-label mr-2 font-weight-bold">Observação
+                            : </label>
+                        <div class="form-control-static mr-2">
+                            <label id="labelObs">show</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group form-row">
+                        <label for="labelSituacao" class="control-label mr-2 font-weight-bold">Situação : </label>
+
+                        <div class="form-control-static mr-2">
+                            <label id="labelSituacao"></label>
+                        </div>
+                        <div class="col 4">
+
+                            <a class="btn btn-danger btn-cancelar-agendamento" href="#" role="button" title="Cancelar"><i class="fa fa-window-close"></i></a> <a class="btn btn-info btn-concluido" href="#" role="button" title="Concluído"><i class="fa fa-calendar"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-fechar" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary btn-editar">Editar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/Layout">
+<div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" th:fragment="cadastrar" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Novo
+                    agendamento</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+            <div id="alert-horario-invalido" class="alert alert-danger alert-dismissible fade show row" role="alert" style="display: none">
+        <strong></strong>
+    </div>
+                <form id="form-agendamento">
+                    <div class="form-group form-row">
+                        <label for="cliente" class="col-form-label col-2">Cliente</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control form-control-sm" id="cliente" name="cliente">
+                            <div class="invalid-feedback">Campo obrigatório</div>
+                        </div>
+                        <div class="custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="cli-nao-cadastrado">
+                                <label class="custom-control-label" for="cli-nao-cadastrado">Cliente não cadastrado</label>
+                         </div>
+                    </div>
+
+                    <div class="form-group form-row">
+							<label for="cargo">Serviços</label> <select id="servicos" name="servicos" 
+								class="selectpicker form-control" title="Selecione" multiple data-live-search="true">
+							</select>
+							<div class="invalid-feedback">Campo obrigatório</div>
+
+                    </div>
+                    <div class="form-group form-row ">
+                        <label for="valor" class="col-form-label col-2">Valor R$</label>
+                        <div class="col-4">
+                            <input type="text" class="form-control form-control-sm" name="valor" id="valor" placeholder="00,00" data-mask="000,00" data-mask-reverse="true">
+                            <div class="invalid-feedback">Campo obrigatório</div>
+                        </div>
+                    </div>
+                    <div class="form-group form-row">
+
+                        <label for="horarioInicio" class="col-form-label col-2">Inicio</label>
+                        <div class="col-4">
+                            <input type="time" class="form-control form-control-sm" name="horarioInicio" id="horarioInicio" autofocus="autofocus">
+                            <div class="invalid-feedback">Campo obrigatório</div>
+                        </div>
+                        <label for="horarioTermino" class="col-form-label col-2">Término</label>
+                        <div class="col-4">
+                            <input type="time" class="form-control form-control-sm" name="horarioTermino" id="horarioTermino" autofocus="autofocus">
+                            <div class="invalid-feedback">Campo obrigatório</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="obs" class="col-form-label">Observação</label>
+                        <textarea class="form-control form-control-sm" name="obs" id="obs"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="submit" class="btn btn-primary btn-salvar" form="form-agendamento">Salvar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</html>

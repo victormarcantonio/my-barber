@@ -1,0 +1,18 @@
+#calendar {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+
+  
+  .fc-nonbusiness {
+    background: gray;
+  }
+
+  .btn-cancelar-agendamento{
+  display: none;
+  }
+  
+  .btn-concluido{
+   display: none;
+  }

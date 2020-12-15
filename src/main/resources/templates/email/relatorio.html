@@ -1,0 +1,85 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sending Email with Thymeleaf HTML Template Example</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+
+    <!-- use the font -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+        }
+
+    </style>
+</head>
+<body style="margin: 0; padding: 0;">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;">
+    <tr>
+
+        <td style="border-top-left-radius:3px;border-top-right-radius:3px;padding:10px 20px" align="left" bgcolor="#191970">
+
+<a href="http://localhost:8081/" target="_blank"><img src="image.png" th:src="'cid:' + ${logo}" height="40" alt=""/></a>
+        </td>
+
+    </tr>
+    <tr>
+        <td bgcolor="#e0e0e0" style="padding: 40px 30px 40px 30px;">
+            <p>Olá, segue em anexo seu relatório de serviços prestados no mês</p>
+
+            <p>Atenciosamente, equipe MyBarber.</p>
+        </td>
+    </tr>
+     <tr>
+    <td>
+    <div style="background-color:transparent">
+						<div class="m_-7016608177297539406block-grid" style="min-width:320px;max-width:600px;word-wrap:break-word;word-break:break-word;Margin:0 auto;background-color:#444444">
+							<div style="border-collapse:collapse;display:table;width:100%;background-color:#191970;background-image:undefined;background-position:undefined;background-repeat:undefined">
+								
+								
+								<div class="m_-7016608177297539406col" style="min-width:320px;max-width:600px;display:table-cell;vertical-align:top;width:600px">
+									<div class="m_-7016608177297539406col_cont" style="width:100%!important">
+										
+										<div style="border-top:0px solid transparent;border-left:0px solid transparent;border-bottom:0px solid transparent;border-right:0px solid transparent;padding-top:15px;padding-bottom:15px;padding-right:0px;padding-left:0px">
+											
+											<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="table-layout:fixed;vertical-align:top;border-spacing:0;border-collapse:collapse" valign="top">
+												<tbody>
+													<tr style="vertical-align:top" valign="top">
+														<td style="word-break:break-word;vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px" valign="top">
+															<table align="center" cellpadding="0" cellspacing="0" role="presentation" style="table-layout:fixed;vertical-align:top;border-spacing:0;border-collapse:collapse" valign="top">
+																<tbody>
+																	<tr style="vertical-align:top;display:inline-block;text-align:center" align="center" valign="top">
+																	    
+																		<!--  <td style="word-break:break-word;vertical-align:top;padding-bottom:0;padding-right:10px;padding-left:10px" valign="top"><a href="https://click.pagina.email/redirect/redirect.aspx?A=R&amp;l=A5ECAFC6-1A68-4B9D-BE06-CC10568F6CF6&amp;u=D27E4029-20CC-4092-8713-E6015AA3CFA6" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://click.pagina.email/redirect/redirect.aspx?A%3DR%26l%3DA5ECAFC6-1A68-4B9D-BE06-CC10568F6CF6%26u%3DD27E4029-20CC-4092-8713-E6015AA3CFA6&amp;source=gmail&amp;ust=1605560274837000&amp;usg=AFQjCNEpeIgmitCZpCMjL4GhCfQ82U2Gew"><img width="32" height="32" src="https://ci4.googleusercontent.com/proxy/-DpEyafHzck0oHu_GFUW3kf-E2rD1r83-hMxzxeS6GWSA0BC2eLpxX4iwBIdxuwpcg89BAHYazLw6GNQXnPQR_Dyo5BjkSKq6qAHFE9aWEMlTkU92eaFQr-XqNnxur-d2S9ksfpEbCMCQKHpHUfrTqV8e8ypcbOCg1TPeVo=s0-d-e1-ft#https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-color/facebook.png" alt="Facebook" title="Facebook" style="text-decoration:none;height:auto;border:0;display:block" class="CToWUd"></a></td>-->
+																		<td style="word-break:break-word;vertical-align:top;padding-bottom:0;padding-right:10px;padding-left:10px" valign="top"><a href="https://www.instagram.com/btechbrasil/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://click.pagina.email/redirect/redirect.aspx?A%3DR%26l%3D470EA883-058E-410D-8DD7-F3C0FADBBBD3%26u%3DD27E4029-20CC-4092-8713-E6015AA3CFA6&amp;source=gmail&amp;ust=1605560274837000&amp;usg=AFQjCNF4FSJ3UDKLZ_QJ_1c9jYZ-pbzk1w"><img width="32" height="32" src="https://ci5.googleusercontent.com/proxy/JnVBDuWoB86nDakRbB8DyKWNvMyjQYVHHS7m-FgGvYTJYlnpZgcJ9baqIQ7n5reueIVJEaVRlpiN80JYzpe43lPq1ILM1LCDaMDhnYRpHB_SvBRgAjxgMv9nCdJdI-CjeUFaF5kdF1SdlRwwH84jwO44YDiUoG9Q-RZ5j2-Y_RMX=s0-d-e1-ft#https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-color/instagram@2x.png" alt="Instagram" title="Instagram" style="text-decoration:none;height:auto;border:0;display:block" class="CToWUd"></a></td>
+																		<!--  <td style="word-break:break-word;vertical-align:top;padding-bottom:0;padding-right:10px;padding-left:10px" valign="top"><a href="https://click.pagina.email/redirect/redirect.aspx?A=R&amp;l=D723C68F-0304-4AD8-B17A-D69D0E5B13B2&amp;u=D27E4029-20CC-4092-8713-E6015AA3CFA6" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://click.pagina.email/redirect/redirect.aspx?A%3DR%26l%3DD723C68F-0304-4AD8-B17A-D69D0E5B13B2%26u%3DD27E4029-20CC-4092-8713-E6015AA3CFA6&amp;source=gmail&amp;ust=1605560274838000&amp;usg=AFQjCNE7G4VbpCLdMyE44Xm31t7EhplKwg"><img width="32" height="32" src="https://ci3.googleusercontent.com/proxy/VCwXmYraU1ze0eeZ79VTJKlBqwFvdcnLbSckv_onti1JVgfvDVjzbNAagPzrrxUZAKjIeBJD2Kez9LDSx-7a46EK7fekY1MXktddEOGljsQZGgq29Qnpkoo57YrEInViTtuB_yl_OjIWS4HBq1-qdn9ON8V63apwafjDPjyzIA=s0-d-e1-ft#https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-color/youtube@2x.png" alt="YouTube" title="YouTube" style="text-decoration:none;height:auto;border:0;display:block" class="CToWUd"></a></td>
+																		<td style="word-break:break-word;vertical-align:top;padding-bottom:0;padding-right:10px;padding-left:10px" valign="top"><a href="https://click.pagina.email/redirect/redirect.aspx?A=R&amp;l=327E87B2-A82E-4315-BA5E-63AD9C0F7F7D&amp;u=D27E4029-20CC-4092-8713-E6015AA3CFA6" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://click.pagina.email/redirect/redirect.aspx?A%3DR%26l%3D327E87B2-A82E-4315-BA5E-63AD9C0F7F7D%26u%3DD27E4029-20CC-4092-8713-E6015AA3CFA6&amp;source=gmail&amp;ust=1605560274838000&amp;usg=AFQjCNGGWQutFEXNcPDg0u5DRZI3d3l0xg"><img width="32" height="32" src="https://ci6.googleusercontent.com/proxy/HDf7LKd44n0C4xRZlxzCEeAN14UmNi5KioIavIHnWJoj4vKq6Mjm1nLAN-jEVzn0Hrexr4OShK8SCyqfsmwcZaUsOF7EPj9VLp9-56iptYew58JPFHHSXMVKekkilsYFbXPwq2yow8DNwBjC2Zw-vRjSnsSNxgHriNC7FyWk3aY=s0-d-e1-ft#https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-color/linkedin@2x.png" alt="LinkedIn" title="LinkedIn" style="text-decoration:none;height:auto;border:0;display:block" class="CToWUd"></a></td>-->
+																	</tr>
+																</tbody>
+															</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											
+										</div>
+										
+									</div>
+								</div>
+								
+								
+							</div>
+						</div>
+					</div>
+    </td>
+    </tr>
+</table>
+
+</body>
+</html>

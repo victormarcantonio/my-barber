@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/Layout">
+<div class="row funcionario-form" style="display: none;" th:fragment="funcionario-form">
+    <div class="col-md-6">
+        <div class="tile">
+            <h3 class="tile-title">Novo funcionário</h3>
+            <div class="tile-body">
+            <form id="form-funcionario">
+                       <h4 class="line-head">Dados pessoais</h4>
+                        <div class="form-row">
+                            <div class="form-group required col-md-6">
+                                <label for="nome" class="control-label">Nome</label>
+                                <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="nome">Sobrenome</label>
+                                <input class="form-control" type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
+                            </div>
+                        </div>
+                        
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="telefone" >Telefone</label>
+                            <input type="text" class="form-control" name="telefone" id="telefone" data-mask="(00) 0000-0000" data-mask-reverse="true">
+                        </div>
+                        
+                        <div class="form-group col-md-6">
+                            <label for="data">Data de Nascimento</label>
+                            <input type="date" class="form-control" name="dataNascimento" id="dataNascimento" placeholder="dataNascimento" autofocus="autofocus">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group required col">
+                            <label for="email" class="control-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" autofocus="autofocus">
+                        </div>
+                    </div>
+                    
+                   
+                    <h4 class="line-head">Dados profissionais</h4>
+                    <div class="form-row">
+                     <div class="form-group required col">
+                        <label for="cargo" class="control-label"> Cargo</label>
+                        <select class="form-control" id="cargo" name="cargo" required>
+                            <option value="" selected>Selecione um cargo</option>
+                            <option value="BARBEIRO">BARBEIRO</option>
+                            <option value="RECEPCIONISTA">RECEPCIONISTA</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group required col-md-6">
+                            <label for="login" class="control-label">Login</label>
+                            <input type="text" class="form-control" name="login" id="login" data-mask-reverse="true">
+                          </div>
+                          <div class="form-group required col-md-6">
+                        <label for="perfilAcesso" class="control-label">Perfil de acesso</label>
+                        <select class="form-control" id="perfilAcesso" name="perfilAcesso">
+                            <option value="" selected>Selecione um perfil de acesso</option>
+                        </select>
+                    </div>
+                   </div>
+                  </form>
+            </div>
+            <div class="tile-footer d-flex justify-content-end">
+                <button type="reset" class="btn btn-secondary btn-cancelar" title="Click para cancelar" form="form-funcionario"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar</button>&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary btn-salvar" type="submit" title="Click para salvar os dados do novo funcionário" form="form-funcionario"><i class="fa fa-fw fa-lg fa-check-circle"></i>Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

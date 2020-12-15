@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/Layout">
+
+<div class="modal fade " id="modalHorarioAtendimento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" th:fragment="horario-atendimento">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Horário de Atendimento</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="form-horario-atendimento">
+                    <div class="form-group form-row diaSemana" style="">
+                        <div class="col-5">
+                            <div class="custom-switch">
+                                <input type="checkbox" class="custom-control-input horario-comercial" id="segundaSwitch">
+                                <label class="custom-control-label" for="segundaSwitch">Segunda-feira</label>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioInicioEspecial" autofocus="autofocus" title="Entrada" disabled>
+                        </div>
+                        <label class="col-form-label"> às </label>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioTerminoEspecial" autofocus="autofocus" title="Saída" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group form-row diaSemana">
+                        <div class="col-5">
+                            <div class="custom-switch">
+                                <input type="checkbox" class="custom-control-input horario-comercial" id="tercaSwitch">
+                                <label class="custom-control-label" for="tercaSwitch">Terça-feira</label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioInicioEspecial" autofocus="autofocus" title="Entrada" disabled>
+                        </div>
+                        <label class="col-form-label"> às </label>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioTerminoEspecial" autofocus="autofocus" title="Saída" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group form-row diaSemana">
+                        <div class="col-5">
+                            <div class="custom-switch">
+                                <input type="checkbox" class="custom-control-input horario-comercial" id="quartaSwitch">
+                                <label class="custom-control-label" for="quartaSwitch">Quarta-feira</label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioInicioEspecial" autofocus="autofocus" title="Entrada" disabled>
+                        </div>
+                        <label class="col-form-label"> às </label>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioTerminoEspecial" autofocus="autofocus" title="Saída" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group form-row diaSemana">
+                        <div class="col-5">
+                            <div class="custom-switch">
+                                <input type="checkbox" class="custom-control-input horario-comercial" id="quintaSwitch">
+                                <label class="custom-control-label" for="quintaSwitch">Quinta-feira</label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioInicioEspecial" autofocus="autofocus" title="Entrada" disabled>
+                        </div>
+                        <label class="col-form-label"> às </label>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioTerminoEspecial" autofocus="autofocus" title="Saída" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group form-row diaSemana">
+                        <div class="col-5">
+                            <div class="custom-switch">
+                                <input type="checkbox" class="custom-control-input horario-comercial" id="sextaSwitch">
+                                <label class="custom-control-label" for="sextaSwitch">Sexta-feira</label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioInicioEspecial" autofocus="autofocus" title="Entrada" disabled>
+                        </div>
+                        <label class="col-form-label"> às </label>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioTerminoEspecial" autofocus="autofocus" title="Saída" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group form-row diaSemana">
+                        <div class="col-5">
+                            <div class="custom-switch">
+                                <input type="checkbox" class="custom-control-input horario-comercial" id="sabadoSwitch">
+                                <label class="custom-control-label" for="sabadoSwitch">Sábado</label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioInicioEspecial" autofocus="autofocus" title="Entrada" disabled>
+                        </div>
+                        <label class="col-form-label"> às </label>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioTerminoEspecial" autofocus="autofocus" title="Saída" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group form-row diaSemana">
+                        <div class="col-5">
+                            <div class="custom-switch">
+                                <input type="checkbox" class="custom-control-input horario-comercial" id="domingoSwitch">
+                                <label class="custom-control-label" for="domingoSwitch">Domingo</label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioInicioEspecial" autofocus="autofocus" title="Entrada" disabled>
+                        </div>
+                        <label class="col-form-label"> às </label>
+                        <div class="col-3">
+                            <input type="text" class="form-control form-control-sm horarioTerminoEspecial" autofocus="autofocus" title="Saída" disabled>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="submit" class="btn btn-primary salvar-horarios" form="form-horario-atendimento">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

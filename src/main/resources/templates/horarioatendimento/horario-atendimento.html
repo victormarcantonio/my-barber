@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:th="http://www.thymeleaf.org" 
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/Layout"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+layout:decorate="~{index}"
+>
+
+<head>
+
+</head>
+
+<main layout:fragment="conteudo"  class="app-content">
+      <div class="app-title">
+        <div>
+          
+          <h1><i class="fa fa-th-list"></i> Horário Atendimento</h1>
+          <p>Gerenciar horarário de atendimento dos barbeiros</p>
+        </div>
+        <ul class="app-breadcrumb breadcrumb side">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item active"><a href="#">Horário Atendimento</a></li>
+        </ul>
+      </div>
+       <div class="row user">
+        <div class="col-md-3">
+          <div class="tile p-0">
+            <ul class="nav flex-column nav-tabs user-tabs list-barbeiros" style="margin-top: 0px!important;cursor: pointer;">
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="tab-content" style="margin-top: 0px!important">
+            <div class="tab-pane active" id="user-timeline">
+              <div class="timeline-post">
+                <div class="post-media"><a href="#"><img src="img/sem-foto.png" style="max-width:48px;max-height:48px;"></a>
+                  <div class="content">
+                    <h5 id="nome-barbeiro"></h5>
+                  </div>
+                  
+                </div>
+                <div class="post-content">
+                <form id="form-horario-atendimento">
+                <div style="border : 1px solid #ddd;padding: 10px 10px 0px 10px">
+                <H5 style="color: #191970">Segunda-feira</H5>
+                <div class="form-row segunda" >
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                    <div class="toggle-flip" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;" >
+                  <label>
+                    <input type="checkbox" class="aberto"><span class="flip-indecator" data-toggle-on="ABERTO" data-toggle-off="FECHADO" style="width: 80px!important"></span>
+                  </label>
+                </div>
+                  </div>
+                 <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada">Entrada</label>
+                        <input type="time" class="form-control entrada"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida">Saida</label>
+                        <input type="time" class="form-control saida" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                     <div class="animated-checkbox" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;">
+              <label>
+                <input type="checkbox" class="almoco" disabled><span class="label-text ">Almoço</span>
+              </label>
+            </div>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida-almoco">Saida Almoço</label>
+                        <input type="time" class="form-control saida-almoco" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada-almoco">Entrada Almoço</label>
+                        <input type="time" class="form-control entrada-almoco"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                 </div>
+                 </div>
+                 
+                 <div style="border : 1px solid #ddd;padding: 10px 10px 0px 10px;margin-top: 5px;">
+                <H5 style="color: #191970">Terça-feira</H5>
+                <div class="form-row terca" >
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                    <div class="toggle-flip" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;" >
+                  <label>
+                    <input type="checkbox" class="aberto"><span class="flip-indecator" data-toggle-on="ABERTO" data-toggle-off="FECHADO" style="width: 80px!important"></span>
+                  </label>
+                </div>
+                  </div>
+                 <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada">Entrada</label>
+                        <input type="time" class="form-control entrada"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida">Saida</label>
+                        <input type="time" class="form-control saida" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                     <div class="animated-checkbox" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;">
+              <label>
+                <input type="checkbox" class="almoco" disabled><span class="label-text ">Almoço</span>
+              </label>
+            </div>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida-almoco">Saida Almoço</label>
+                        <input type="time" class="form-control saida-almoco" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada-almoco">Entrada Almoço</label>
+                        <input type="time" class="form-control entrada-almoco"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                 </div>
+                 </div>
+                 <div style="border : 1px solid #ddd;padding: 10px 10px 0px 10px;margin-top: 5px;">
+                <H5 style="color: #191970">Quarta-feira</H5>
+                <div class="form-row quarta" >
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                    <div class="toggle-flip" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;" >
+                  <label>
+                    <input type="checkbox" class="aberto"><span class="flip-indecator" data-toggle-on="ABERTO" data-toggle-off="FECHADO" style="width: 80px!important"></span>
+                  </label>
+                </div>
+                  </div>
+                 <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada">Entrada</label>
+                        <input type="time" class="form-control entrada"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida">Saida</label>
+                        <input type="time" class="form-control saida" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                     <div class="animated-checkbox" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;">
+              <label>
+                <input type="checkbox" class="almoco" disabled><span class="label-text ">Almoço</span>
+              </label>
+            </div>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida-almoco">Saida Almoço</label>
+                        <input type="time" class="form-control saida-almoco" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada-almoco">Entrada Almoço</label>
+                        <input type="time" class="form-control entrada-almoco"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                 </div>
+                 </div>
+                 <div style="border : 1px solid #ddd;padding: 10px 10px 0px 10px;margin-top: 5px;">
+                <H5 style="color: #191970">Quinta-feira</H5>
+                <div class="form-row quinta" >
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                    <div class="toggle-flip" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;" >
+                  <label>
+                    <input type="checkbox" class="aberto"><span class="flip-indecator" data-toggle-on="ABERTO" data-toggle-off="FECHADO" style="width: 80px!important"></span>
+                  </label>
+                </div>
+                  </div>
+                 <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada">Entrada</label>
+                        <input type="time" class="form-control entrada"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida">Saida</label>
+                        <input type="time" class="form-control saida" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                     <div class="animated-checkbox" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;">
+              <label>
+                <input type="checkbox" class="almoco" disabled><span class="label-text ">Almoço</span>
+              </label>
+            </div>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida-almoco">Saida Almoço</label>
+                        <input type="time" class="form-control saida-almoco" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada-almoco">Entrada Almoço</label>
+                        <input type="time" class="form-control entrada-almoco"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                 </div>
+                 </div>
+                 <div style="border : 1px solid #ddd;padding: 10px 10px 0px 10px;margin-top: 5px;">
+                <H5 style="color: #191970">Sexta-feira</H5>
+                <div class="form-row sexta" >
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                    <div class="toggle-flip" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;" >
+                  <label>
+                    <input type="checkbox" class="aberto"><span class="flip-indecator" data-toggle-on="ABERTO" data-toggle-off="FECHADO" style="width: 80px!important"></span>
+                  </label>
+                </div>
+                  </div>
+                 <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada">Entrada</label>
+                        <input type="time" class="form-control entrada"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida">Saida</label>
+                        <input type="time" class="form-control saida" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                     <div class="animated-checkbox" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;">
+              <label>
+                <input type="checkbox" class="almoco" disabled><span class="label-text ">Almoço</span>
+              </label>
+            </div>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida-almoco">Saida Almoço</label>
+                        <input type="time" class="form-control saida-almoco" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada-almoco">Entrada Almoço</label>
+                        <input type="time" class="form-control entrada-almoco"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                 </div>
+                 </div>
+                 <div style="border : 1px solid #ddd;padding: 10px 10px 0px 10px;margin-top: 5px;">
+                <H5 style="color: #191970">Sábado</H5>
+                <div class="form-row sabado" >
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                    <div class="toggle-flip" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;" >
+                  <label>
+                    <input type="checkbox" class="aberto"><span class="flip-indecator" data-toggle-on="ABERTO" data-toggle-off="FECHADO" style="width: 80px!important"></span>
+                  </label>
+                </div>
+                  </div>
+                 <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada">Entrada</label>
+                        <input type="time" class="form-control entrada"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida">Saida</label>
+                        <input type="time" class="form-control saida" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                     <div class="animated-checkbox" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;">
+              <label>
+                <input type="checkbox" class="almoco" disabled><span class="label-text ">Almoço</span>
+              </label>
+            </div>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida-almoco">Saida Almoço</label>
+                        <input type="time" class="form-control saida-almoco" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada-almoco">Entrada Almoço</label>
+                        <input type="time" class="form-control entrada-almoco"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                 </div>
+                 </div>
+                 <div style="border : 1px solid #ddd;padding: 10px 10px 0px 10px;margin-top: 5px;">
+                <H5 style="color: #191970">Domingo</H5>
+                <div class="form-row domingo" >
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                    <div class="toggle-flip" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;" >
+                  <label>
+                    <input type="checkbox" class="aberto"><span class="flip-indecator" data-toggle-on="ABERTO" data-toggle-off="FECHADO" style="width: 80px!important"></span>
+                  </label>
+                </div>
+                  </div>
+                 <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada">Entrada</label>
+                        <input type="time" class="form-control entrada"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida">Saida</label>
+                        <input type="time" class="form-control saida" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2 d-flex justify-content-center">
+                     <div class="animated-checkbox" style="margin-top: 32px;padding-right: 5px;padding-left: 5px;">
+              <label>
+                <input type="checkbox" class="almoco" disabled><span class="label-text ">Almoço</span>
+              </label>
+            </div>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="saida-almoco">Saida Almoço</label>
+                        <input type="time" class="form-control saida-almoco" placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label class="control-label" for="entrada-almoco">Entrada Almoço</label>
+                        <input type="time" class="form-control entrada-almoco"  placeholder="--:--" autofocus="autofocus" disabled/>
+                  </div>
+                 </div>
+                 </div>
+                 
+                </form>
+                
+                </div>
+                <div class="d-flex justify-content-end" style="border-top: 1px solid #ddd;padding: 20px 0 0 0">
+                <div><button type="submit" class="btn btn-primary" form="form-horario-atendimento"><i class="fa fa-floppy-o"></i>Salvar</button></div>
+              </div>	
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+</main>
+
+
+
+<div layout:fragment="js-pagina">
+  <script src="js/horario-atendimento.js"></script>
+  <script type="text/javascript" src="js/plugins/moment.min.js"></script>
+  
+</div>
+
+
+</html>

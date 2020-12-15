@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/Layout" layout:decorate="~{index}">
+
+
+<main class="app-content" layout:fragment="conteudo">
+	<div class="app-title">
+		<div>
+			<h1>
+				<i class="fa fa-dashboard"></i> Dashboard
+			</h1>
+			<p id="desc-barbearia"> </p>
+		</div>
+		<ul class="app-breadcrumb breadcrumb">
+			<li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+			<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+		</ul>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-lg-4">
+			<div class="widget-small primary coloured-icon">
+				<i class="icon fa fa-users fa-3x"></i>
+				<div class="info">
+					<h4>Funcionários</h4>
+					<p>
+						<b id="qtd-funcionario">0</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4">
+			<div class="widget-small info coloured-icon">
+				<i class="icon fa fa-users fa-3x"></i>
+				<div class="info">
+					<h4>Clientes</h4>
+					<p>
+						<b id="qtd-cliente">0</b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4">
+			<div class="widget-small warning coloured-icon">
+				<i class="icon fa fa-scissors fa-3x"></i>
+				<div class="info">
+					<h4>Serviços</h4>
+					<p>
+						<b id="qtd-servico">0</b>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="tile">
+				<h3 class="tile-title">Lucro Anual (R$)</h3>
+				<div class="embed-responsive embed-responsive-16by9">
+					<canvas class="embed-responsive-item" id="lucro-anual"></canvas>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="tile">
+				<h3 class="tile-title titulo-grafico-mensal" ></h3>
+				<div class="embed-responsive embed-responsive-16by9">
+					<canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<div layout:fragment="js-pagina"> 
+<script type="text/javascript" src="js/plugins/moment.min.js"></script>
+<script type="text/javascript" src="js/plugins/chart.js"></script>
+<script type="text/javascript" src="js/dashboard.js"></script>
+
+	<!-- Google analytics script-->
+	<script type="text/javascript">
+		if (document.location.hostname == 'pratikborsadiya.in') {
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script',
+					'//www.google-analytics.com/analytics.js', 'ga');
+			ga('create', 'UA-72504830-1', 'auto');
+			ga('send', 'pageview');
+		}
+	</script>
+
+</div>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/Layout" layout:decorate="~{index}">
+
+
+<main layout:fragment="conteudo"  class="app-content">
+      <div class="app-title">
+        <div>
+          
+          <h1><i class="fa fa-th-list"></i> Barbearia</h1>
+          <p>Configure as informações da barbearia</p>
+        </div>
+        <ul class="app-breadcrumb breadcrumb side">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item active"><a href="#">Barbearia</a></li>
+        </ul>
+      </div>
+  
+<div class="row" >
+    <div class="col-md-6">
+        <div class="tile">
+        <h3 class="tile-title">Editar</h3>
+            
+            <div class="tile-body">
+                <form id="form-barbearia">
+                <h4 class="line-head">Dados</h4>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="nome">Nome</label>
+                                <input class="form-control" type="text" id="nome" name="nome" th:value="*{session.barbearia.nome}" >
+                                <div class="invalid-feedback">
+                                    Campo obrigatório
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="descricao">Descricão</label>
+                                <textarea class="form-control" type="text" id="descricao" name="descricao" th:text="*{session.barbearia.descricao}"> </textarea>
+                                <div class="invalid-feedback">
+                                    Campo obrigatório
+                                </div>
+                            </div>
+                        </div>
+                     <h4 class="line-head">Endereço</h4>
+                     <div class="form-row">
+    <div class="form-group col-md-6">
+        <label class="control-label">CEP</label>
+        <div class="form-group">
+            <label class="sr-only" for="cep"></label>
+            <div class="input-group">
+                <input class="form-control" id="cep" name="cep" type="text" th:value="*{session.barbearia.endereco.cep}"/>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary btn-buscar" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="numero">Número</label>
+                            <input type="text" class="form-control" name="numero" id="numero" th:value="*{session.barbearia.endereco.numero}">
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="rua">Rua</label>
+                            <input type="text" class="form-control" name="logradouro" id="logradouro" data-mask-reverse="true" th:value="*{session.barbearia.endereco.logradouro}" readonly>
+                            <div class="invalid-feedback">
+                                Campo obrigatório
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        
+                        <div class="form-group col-md-5">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" class="form-control" name="bairro" id="bairro" th:value="*{session.barbearia.endereco.bairro}" readonly>
+                            <div class="invalid-feedback">
+                                Campo obrigatório
+                            </div>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="Cidade">Cidade</label>
+                            <input type="text" class="form-control" name="cidade" id="cidade" th:value="*{session.barbearia.endereco.cidade}" readonly>
+                            <div class="invalid-feedback">
+                                Campo obrigatório
+                            </div>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="UF">UF</label>
+                            <input type="text" class="form-control" name="uf" id="uf" th:value="*{session.barbearia.endereco.uf}"  readonly>
+                            <div class="invalid-feedback">
+                                Campo obrigatório
+                            </div>
+                        </div>
+                    </div>
+            </form>
+            </div>
+            <div class="tile-footer d-flex justify-content-end">
+                <button type="reset" class="btn btn-secondary btn-cancelar" title="Click para cancelar" form="form-barbearia"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar</button>&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary btn-salvar" type="submit" th:attr="data-id=*{session.barbearia.id}"  title="Click para salvar os dados da barbearia" form="form-barbearia"><i class="fa fa-fw fa-lg fa-check-circle" type="submit" form=""></i>Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+       
+</main>
+
+<div layout:fragment="js-pagina">
+<script src="js/barbearia.js" layout:fragment="js"></script>
+</div>
+
+</body>
+</html>

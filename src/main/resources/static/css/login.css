@@ -1,0 +1,51 @@
+.login-box {
+	    min-height: 350px!important;
+}
+
+.login-box.flipped {
+	    min-height: 300px!important;
+}
+
+/* s� por enquanto n�o tem login social */
+
+.box-error {
+	/*min-height: 450px !important;*/
+	min-height: 400px !important;
+}
+
+.box-logout {
+	/*min-height: 450px !important;*/
+	min-height: 400px !important;
+}
+
+.login-or {
+	position: relative;
+	color: #aaa;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.span-or {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: -2px;
+	margin-left: -25px;
+	background-color: #fff;
+	width: 50px;
+	text-align: center;
+}
+
+.hr-or {
+	height: 1px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+.link-cad{
+	color: #666;
+    font-weight: 700;
+}
+

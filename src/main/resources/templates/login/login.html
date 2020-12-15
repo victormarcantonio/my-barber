@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/imagens/mybarb.png" />
+    
+    
+    
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="compiler/main.css" />
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Login - MyBarber</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" type="text/css" href="pluginsAdd/bootstrap-social-gh-pages/bootstrap-social.css" />
+    <!-- toastr -->
+<link href="pluginsAdd/toastr/toastr.min.css" rel="stylesheet" />
+</head>
+<body>
+<section class="material-half-bg">
+    <div class="cover"></div>
+</section>
+<section class="login-content">
+    <div class="logo">
+        <img src="/imagens/logoFundoAzul.png" height="100" alt="" />
+    </div>
+    <div class="login-box">
+        <form class="login-form" id="form-login">
+            <div id="alert-erro" style="display: none;" class="alert alert-danger">
+           
+            </div>
+            <div id="alert-sucesso" style="display: none;" class="alert alert-success">
+           
+            </div>
+            <div class="form-group">
+                <label class="control-label">LOGIN</label>
+                <input type="text" name="login" class="form-control" id="login" placeholder="Login" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">SENHA</label>
+                <input type="password" name="senha" id="senha" class="form-control" placeholder="Senha" />
+            </div>
+            <div class="form-group">
+                <div class="utility">
+                    <!--  <div class="animated-checkbox">
+                        <label> <input type="checkbox" id="lembrar"/><span class="label-text">Lembrar-me</span> </label>
+                    </div>-->
+                    <p class="semibold-text mb-2"><a href="#" class="flip" data-toggle="flip">Esqueceu a senha ?</a></p>
+                </div>
+            </div>
+            <div class="form-group btn-container">
+                <button type="submit" class="btn btn-primary btn-block" form="form-login"><i class="fa fa-sign-in fa-lg fa-fw"></i>ENTRAR</button>
+            </div>
+          <!--   <div class="col-md-12">
+                <div class="login-or">
+                    <hr class="hr-or" />
+                    <span class="span-or">ou</span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-social-icon btn-facebook" type="button" title="Entrar com Facebook"><span class="fa fa-facebook"></span></button>
+                <button class="btn btn-social-icon btn-google ml-2 mr-2" type="button" title="Entrar com Google"><span class="fa fa-google"></span></button>
+                <button class="btn btn-social-icon btn-linkedin" type="button"><span class="fa fa-linkedin" title="Entrar com Linkedin"></span></button>
+            </div> --> 
+            <p class="form-group text-center link-cad mt-3">Não tem uma conta? <a href="/registro" id="signup">Clique aqui</a></p>
+        </form>
+        <form class="forget-form" id="form-esqueci-senha">
+            <h3 class="login-head"><i class="fa fa-lg fa-fw fa-lock"></i>Esqueceu a senha?</h3>
+            <div  class="alert alert-success" style="display: none;">
+                Link de alteração de senha enviado para o e-mail <strong></strong>
+            </div>
+            <div class="form-group">
+                <label class="control-label">E-MAIL</label>
+                <input class="form-control" type="text" placeholder="Email" id="email" name="email" />
+            </div>
+            <div class="form-group btn-container">
+                <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-unlock fa-lg fa-fw"></i>RECUPERAR</button>
+            </div>
+            <div class="form-group mt-3">
+                <p class="semibold-text mb-0">
+                    <a href="#" class="voltar-login" data-toggle="flip"><i class="fa fa-angle-left fa-fw"></i> Voltar para login</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    <div class="modal fade  modal-loading"
+         data-backdrop="static" data-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" style="width: 48px">
+                <span class="fa fa-spinner fa-spin fa-3x"></span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Essential javascripts for application to work-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="pluginsAdd/jquery.validate.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/bootstrap-waitingfor.js"></script>
+<script src="pluginsAdd/toastr/toastr.min.js"></script>
+<script src="js/login.js"></script>
+<!-- The javascript plugin to display page loading on top-->
+<script src="js/plugins/pace.min.js"></script>
+</body>
+</html>
